@@ -1,15 +1,17 @@
-grades = {"Harry": 81, "Ron": 78, "Hermione": 99, "Draco": 74, "Neville": 62,}
-grade = grades.values()
+import os 
+os.system('cls')
 
-for item in grades.values():
-    if item >= 91:
-        grades[item] = "Outstanding"
-    elif item <= 90 and item >= 81:
-        grades[item] = "Exceeds Expectations"
-    elif item <= 80 and item >= 71:
-        grades[item] = "Acceptable"
-    elif item <= 70:
-        grades[item] = 'Fail'
-    
-    
+grades = {"Harry": 81, "Ron": 78, "Hermione": 99, "Draco": 74, "Neville": 62,}
+grade = grades.copy()
+
+for key, value in grade.items():
+    if value >= 91:
+        grades[key] = 'Outstanding'
+    if value <= 90 and value >= 81:
+        grades[key] = 'Exceeds Expectations'
+    if value <= 80 and value >= 71:
+        grades[key] = "Acceptable"
+    if value <= 70:
+        grades[key] = 'Fail'
+
 print(grades)
