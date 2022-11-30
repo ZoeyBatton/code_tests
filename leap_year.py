@@ -1,10 +1,11 @@
-def years():
-    year = int(input('Enter a year: '))
-    a = year % 4
-    b = year % 100
-    c = year % 400
-    if a == 0 and b == 0 and c == 0:
-        print('Leap year.')
+year = int(input('Enter a year: '))
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print('Leap year.')
+        else:
+            print("Not leap year.")
     else:
-        print("Not leap year.")
-years()
+        print("Leap Year")
+else:
+    print("Not leap year.")
