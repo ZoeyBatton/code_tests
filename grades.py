@@ -3,7 +3,6 @@ os.system('cls')
 
 grades = {"Harry": 81, "Ron": 78, "Hermione": 99, "Draco": 74, "Neville": 62,}
 grade = grades.copy()
-
 for key, value in grade.items():
     if value >= 91:
         grades[key] = 'Outstanding'
@@ -13,5 +12,4 @@ for key, value in grade.items():
         grades[key] = "Acceptable"
     if value <= 70:
         grades[key] = 'Fail'
-
 print(grades)
